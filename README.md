@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/34179616/README.md)
 # Analista por uma Noite · página do bilhete
 
 Página de inscrição do workshop exclusivo de 11 de novembro, às 21h00.
@@ -8,7 +9,8 @@ Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formu
 | `index.html` | A página do bilhete, com o formulário |
 | `sucesso.html` | A página que aparece depois da inscrição (`/sucesso`) |
 | `vercel.json` | URLs limpos (`/sucesso` em vez de `/sucesso.html`) |
-| `favicon.ico` | O logótipo GM no separador do navegador |
+| `favicon-32.png` e `favicon-16.png` | O logótipo GM no separador do navegador |
+| `favicon.ico` | O mesmo, para navegadores que o procuram por defeito |
 | `icon-192.png` | O logótipo para Android e para quem guarda a página |
 | `apple-touch-icon.png` | O logótipo para iPhone, quando se guarda no ecrã principal |
 | `README.md` | Este guia |
@@ -34,7 +36,7 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 
 ## 3. Deploy
 
-1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os sete ficheiros na raiz.
+1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os nove ficheiros na raiz.
 2. No Vercel: Add New Project, importa o repositório e faz Deploy. Não há build: é HTML estático.
 3. Copia o domínio que o Vercel te der e volta ao passo 1.4 para meter o redirecionamento para `/sucesso`.
 
