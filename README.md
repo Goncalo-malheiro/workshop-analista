@@ -15,6 +15,7 @@ Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formu
 | `logo.png` | O logótipo no topo da página |
 | `goncalo.webp` e `goncalo-900.webp` | A tua fotografia recortada, no topo da página (versão grande e versão para telemóvel) |
 | `gm-mark-light.png` | O símbolo GM em marca de água, atrás da fotografia |
+| `bilhete-email.png` | A imagem do bilhete para o topo do email de confirmação |
 | `README.md` | Este guia |
 
 ## 1. No Kit (10 minutos)
@@ -59,22 +60,26 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 
 ## Email do bilhete
 
-**Assunto:** O teu bilhete para o Analista por uma Noite
+No Kit: formulário `Workshop nov26` → Settings → Incentive → Edit Email Contents.
+
+**Assunto:** Confirma o teu lugar para quinta, 19 de novembro
+
+No topo, um bloco de imagem com `bilhete-email.png` (também em `https://workshop-analista.vercel.app/bilhete-email.png`). Texto alternativo: "Bilhete para o Analista por uma Noite, quinta, 19 de novembro, às 21h00".
 
 > Olá {{ subscriber.first_name }},
 >
-> Está feito: tens lugar no workshop.
+> Falta um clique para garantires o teu lugar no workshop.
+>
+> [botão de confirmação do Kit, com o texto "Confirmar o meu lugar" e a cor #1B2A4A]
+>
+> Ao confirmares, entras logo no chat do Investor Circle. É lá que fica fixado tudo o que precisas para o dia.
 >
 > **Quinta-feira, 19 de novembro, às 21h00**
-> Ao vivo no chat do Investor Circle na Whop.
+> Online e ao vivo, cerca de 90 minutos. O link de acesso chega por email na véspera e uma hora antes.
 >
-> Clica no botão abaixo para confirmares o teu email. É isso que te garante o Playbook agora e o link de acesso no dia.
+> O Playbook já é teu e vai no fim deste email. Não precisas de o ler antes: chegas e aprendes.
 >
-> [botão de confirmação do Kit]
->
-> Não precisas de ler o Playbook antes. Chegas e aprendes.
->
-> Até dia 19,
+> Até quinta,
 > Gonçalo
 
 O link de acesso ao workshop vai nos lembretes da véspera e de uma hora antes, enviados aos subscritores deste formulário.
