@@ -1,6 +1,6 @@
 # Analista por uma Noite · página do bilhete
 
-Página de inscrição do workshop exclusivo de 16 de novembro, às 21h00.
+Página de inscrição do workshop exclusivo de 19 de novembro, às 21h00.
 Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formulário enviado diretamente para o Kit.
 
 | Ficheiro | O que é |
@@ -62,7 +62,7 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 >
 > Está feito: tens lugar no workshop.
 >
-> **Segunda-feira, 16 de novembro, às 21h00**
+> **Quinta-feira, 19 de novembro, às 21h00**
 > Ao vivo no chat do Investor Circle na Whop.
 >
 > Clica no botão abaixo para confirmares o teu email. É isso que te garante o Playbook agora e o link de acesso no dia.
@@ -71,7 +71,7 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 >
 > Não precisas de ler o Playbook antes. Chegas e aprendes.
 >
-> Até dia 16,
+> Até dia 19,
 > Gonçalo
 
 O link de acesso ao workshop vai nos lembretes da véspera e de uma hora antes, enviados aos subscritores deste formulário.
