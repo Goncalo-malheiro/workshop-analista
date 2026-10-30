@@ -12,6 +12,9 @@ Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formu
 | `favicon.ico` | O mesmo, para navegadores que o procuram por defeito |
 | `icon-192.png` | O logótipo para Android e para quem guarda a página |
 | `apple-touch-icon.png` | O logótipo para iPhone, quando se guarda no ecrã principal |
+| `logo.png` | O logótipo no topo da página |
+| `goncalo.webp` e `goncalo-900.webp` | A tua fotografia recortada, no topo da página (versão grande e versão para telemóvel) |
+| `gm-mark-light.png` | O símbolo GM em marca de água, atrás da fotografia |
 | `README.md` | Este guia |
 
 ## 1. No Kit (10 minutos)
@@ -35,7 +38,7 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 
 ## 3. Deploy
 
-1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os nove ficheiros na raiz.
+1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os ficheiros todos na raiz.
 2. No Vercel: Add New Project, importa o repositório e faz Deploy. Não há build: é HTML estático.
 3. Copia o domínio que o Vercel te der e volta ao passo 1.4 para meter o redirecionamento para `/sucesso`.
 
