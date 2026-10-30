@@ -64,7 +64,9 @@ No Kit: formulário `Workshop nov26` → Settings → Incentive → Edit Email C
 
 **Assunto:** Confirma o teu lugar para quinta, 19 de novembro
 
-No topo, um bloco de imagem com `bilhete-email.png` (também em `https://workshop-analista.vercel.app/bilhete-email.png`). Texto alternativo: "Bilhete para o Analista por uma Noite, quinta, 19 de novembro, às 21h00".
+Versão em HTML (recomendada): `email/bilhete-bloco-1.html` vai por cima do botão de confirmação e `email/bilhete-bloco-2.html` por baixo, cada um num bloco HTML do editor do Kit (escreve `/` numa linha vazia e escolhe HTML).
+
+Versão simples: no topo, um bloco de imagem com `bilhete-email.png` (também em `https://workshop-analista.vercel.app/bilhete-email.png`). Texto alternativo: "Bilhete para o Analista por uma Noite, quinta, 19 de novembro, às 21h00".
 
 > Olá {{ subscriber.first_name }},
 >
