@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilhete levantado · Analista por uma Noite</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --navy-2: #24365C;
+    --gold: #B07A2E;
+    --gold-text: #8F6122;
+    --gold-light: #EBCF9B;
+    --cream: #F3EFE5;
+    --paper: #FBF8F2;
+    --ink-soft: #4A5470;
+    --grid: rgba(27, 42, 74, 0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--navy);
+    background-color: var(--cream);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 64px 24px 72px; }
+  .brand { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; margin-bottom: 56px; }
+  .eyebrow { font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 14px; }
+  h1 { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: clamp(40px, 7vw, 68px); line-height: 1.02; letter-spacing: -0.02em; }
+  h1 em { font-style: italic; font-weight: 500; color: var(--gold); }
+  .lead { font-size: 20px; color: var(--ink-soft); margin-top: 20px; }
+  .steps { list-style: none; counter-reset: passo; margin-top: 40px; display: grid; gap: 20px; }
+  .steps li {
+    counter-increment: passo; position: relative; background: var(--paper);
+    border: 2px solid var(--navy); border-radius: 16px; padding: 24px 24px 24px 84px;
+  }
+  .steps li::before {
+    content: counter(passo); position: absolute; left: 24px; top: 24px;
+    width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold-light);
+    font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 40px; text-align: center;
+  }
+  .steps h2 { font-size: 20px; font-weight: 800; line-height: 1.3; }
+  .steps p { color: var(--ink-soft); margin-top: 6px; }
+  .btn {
+    display: inline-block; margin-top: 16px; font-weight: 800; font-size: 16px; text-decoration: none;
+    color: var(--cream); background: var(--navy); border: 2px solid var(--navy); border-radius: 12px; padding: 12px 20px;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { background: var(--navy-2); transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--navy); }
+  .btn.ghost:hover { background: var(--gold-light); }
+  .note { margin-top: 36px; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 20px; color: var(--gold-text); }
+  footer { margin-top: 56px; font-size: 14px; color: var(--ink-soft); }
+  @media (max-width: 600px) {
+    .wrap { padding: 40px 16px 56px; }
+    .brand { margin-bottom: 40px; }
+    .steps li { padding: 76px 20px 22px; }
+    .steps li::before { left: 20px; top: 22px; }
+    .btn { display: block; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="brand">Gonçalo Malheiro</p>
+    <p class="eyebrow">Bilhete levantado</p>
+    <h1>Está feito.<br><em>Vemo-nos dia 11.</em></h1>
+    <p class="lead">Faltam três passos rápidos para não perderes nada.</p>
+
+    <ol class="steps">
+      <li>
+        <h2>Confirma o teu email</h2>
+        <p>Acabou de te chegar um email meu. Se não estiver na caixa principal, vê em Promoções ou em Spam. Clica no botão de confirmação: é isso que te garante o Playbook e o link de acesso.</p>
+      </li>
+      <li>
+        <h2>Entra no chat da Whop</h2>
+        <p>É lá que o workshop acontece, e é lá que partilhamos as análises depois.</p>
+        <!-- Troca WHOP_CHAT_URL pelo link do chat público do Investor Circle. -->
+        <a class="btn" href="WHOP_CHAT_URL">Abrir o chat da Whop</a>
+      </li>
+      <li>
+        <h2>Guarda a data</h2>
+        <p>Quarta-feira, 11 de novembro, às 21h00 (hora de Lisboa).</p>
+        <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Analista%20por%20uma%20Noite%20%C2%B7%20Workshop&amp;dates=20261111T210000Z%2F20261111T223500Z&amp;ctz=Europe%2FLisbon&amp;details=Workshop%20exclusivo%20com%20o%20Gon%C3%A7alo%20Malheiro%2C%20ao%20vivo%20no%20chat%20do%20Investor%20Circle%20na%20Whop.%20O%20link%20de%20acesso%20chega%20por%20email.&amp;location=Chat%20do%20Investor%20Circle%20na%20Whop" target="_blank" rel="noopener">Adicionar ao Google Calendar</a>
+      </li>
+    </ol>
+
+    <p class="note">Não precisas de preparar nada. Chegas e aprendes.</p>
+    <footer>Formação e análise pessoal. Não constitui recomendação de investimento.</footer>
+  </main>
+</body>
+</html>
