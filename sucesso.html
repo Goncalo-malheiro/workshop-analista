@@ -6,6 +6,9 @@
 <title>Bilhete levantado · Analista por uma Noite</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1B2A4A">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -70,7 +73,19 @@
     .steps li::before { left: 20px; top: 22px; }
     .btn { display: block; text-align: center; }
   }
-  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .brand, .eyebrow, h1, .lead, .steps li, .note { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .eyebrow { animation-delay: 0.08s; }
+  h1 { animation-delay: 0.16s; }
+  .lead { animation-delay: 0.3s; }
+  .steps li:nth-child(1) { animation-delay: 0.42s; }
+  .steps li:nth-child(2) { animation-delay: 0.54s; }
+  .steps li:nth-child(3) { animation-delay: 0.66s; }
+  .note { animation-delay: 0.8s; }
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+    .brand, .eyebrow, h1, .lead, .steps li, .note { animation: none; }
+  }
 </style>
 </head>
 <body>
@@ -88,8 +103,8 @@
       <li>
         <h2>Entra no chat da Whop</h2>
         <p>É lá que o workshop acontece, e é lá que partilhamos as análises depois.</p>
-        <!-- Troca WHOP_CHAT_URL pelo link do chat público do Investor Circle. -->
-        <a class="btn" href="WHOP_CHAT_URL">Abrir o chat da Whop</a>
+        <!-- Chat público do Investor Circle na Whop. -->
+        <a class="btn" href="https://whop.com/comunidade-investor-circle/exp_MpkuaEBWqdV4TL/app/" target="_blank" rel="noopener">Abrir o chat da Whop</a>
       </li>
       <li>
         <h2>Guarda a data</h2>
