@@ -1,14 +1,16 @@
-[Uploading README.md…]()
 # Analista por uma Noite · página do bilhete
 
 Página de inscrição do workshop exclusivo de 11 de novembro, às 21h00.
-Segue o padrão das outras campanhas: quatro ficheiros na raiz, deploy no Vercel, formulário enviado diretamente para o Kit.
+Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formulário enviado diretamente para o Kit.
 
 | Ficheiro | O que é |
 | --- | --- |
 | `index.html` | A página do bilhete, com o formulário |
 | `sucesso.html` | A página que aparece depois da inscrição (`/sucesso`) |
 | `vercel.json` | URLs limpos (`/sucesso` em vez de `/sucesso.html`) |
+| `favicon.ico` | O logótipo GM no separador do navegador |
+| `icon-192.png` | O logótipo para Android e para quem guarda a página |
+| `apple-touch-icon.png` | O logótipo para iPhone, quando se guarda no ecrã principal |
 | `README.md` | Este guia |
 
 ## 1. No Kit (10 minutos)
@@ -26,13 +28,13 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 
 ## 2. Nos ficheiros
 
-1. Em `index.html`, troca `FORM_ID` pelo número do formulário.
-2. Em `sucesso.html`, troca `WHOP_CHAT_URL` pelo link do chat público da Whop.
+1. Em `index.html`, o formulário já aponta para o Kit (formulário 10117094).
+2. Em `sucesso.html`, o botão já leva ao chat público da Whop (o mesmo link do Playbook).
 3. Se mudares o nome do workshop, procura e substitui `Analista por uma Noite` nos dois ficheiros. No `index.html` o título grande está partido em duas linhas (`Analista<br><em>por uma Noite</em>`), e no `sucesso.html` o nome também está no link do Google Calendar (`Analista%20por%20uma%20Noite`).
 
 ## 3. Deploy
 
-1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os quatro ficheiros na raiz.
+1. Cria um repositório novo no GitHub (por exemplo `workshop-analista`) e mete os sete ficheiros na raiz.
 2. No Vercel: Add New Project, importa o repositório e faz Deploy. Não há build: é HTML estático.
 3. Copia o domínio que o Vercel te der e volta ao passo 1.4 para meter o redirecionamento para `/sucesso`.
 
