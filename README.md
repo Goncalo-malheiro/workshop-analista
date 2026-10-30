@@ -15,7 +15,8 @@ Segue o padrão das outras campanhas: ficheiros na raiz, deploy no Vercel, formu
 | `logo.png` | O logótipo no topo da página |
 | `goncalo.webp` e `goncalo-900.webp` | A tua fotografia recortada, no topo da página (versão grande e versão para telemóvel) |
 | `gm-mark-light.png` | O símbolo GM em marca de água, atrás da fotografia |
-| `bilhete-email.png` | A imagem do bilhete para o topo do email de confirmação |
+| `bilhete-email.png` | A imagem do bilhete para o topo do email de confirmação (versão antiga, com logótipo) |
+| `bilhete-email-v2.png` | A imagem do bilhete, compacta, para usar com o modelo do Kit |
 | `README.md` | Este guia |
 
 ## 1. No Kit (10 minutos)
@@ -63,6 +64,8 @@ Não precisas de tag: para os lembretes e para medir, filtras os subscritores po
 No Kit: formulário `Workshop nov26` → Settings → Incentive → Edit Email Contents.
 
 **Assunto:** Confirma o teu lugar para quinta, 19 de novembro
+
+Modelo do Kit: `email/modelo-gm-kit.html` é o modelo HTML da conta (fundo creme, logótipo, cartão branco a 600 px). Cria-o em Send → Email Templates → New Email Template → HTML e define-o como predefinido: o email de confirmação usa sempre o modelo predefinido.
 
 Versão em HTML (recomendada): `email/bilhete-bloco-1.html` vai por cima do botão de confirmação e `email/bilhete-bloco-2.html` por baixo, cada um num bloco HTML do editor do Kit (escreve `/` numa linha vazia e escolhe HTML).
 
