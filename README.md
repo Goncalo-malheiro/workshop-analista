@@ -30,7 +30,7 @@ Os nomes dos menus podem variar ligeiramente.
 5. **Campo personalizado:** cria um campo chamado `origem`. É ele que te diz se a pessoa veio da Whop ou da newsletter.
 6. **Copia o número do formulário.** Aparece no URL do editor e no código de embed (`app.kit.com/forms/NUMERO/...`).
 
-Não precisas de tag: para os lembretes e para medir, filtras os subscritores por este formulário.
+Tag: o formulário da página envia escondida a tag `workshop` (ID 25324773, campo `tags[]`). Para o Kit a aceitar, o formulário Workshop nov26 tem um campo de tag com essa opção. Quem se inscreve fica logo com a tag, mesmo antes de confirmar o email.
 
 ## 2. Nos ficheiros
 
