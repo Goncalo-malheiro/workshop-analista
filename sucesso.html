@@ -74,6 +74,7 @@
   }
   .btn:hover { background: var(--navy-2); transform: translateY(-1px); }
   .btn.ghost { background: transparent; color: var(--navy); }
+  .btn + .btn { margin-left: 8px; }
   .btn.ghost:hover { background: var(--gold-light); }
   .note { margin-top: 36px; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 20px; color: var(--gold-text); }
   footer { margin-top: 56px; font-size: 14px; color: var(--ink-soft); }
@@ -83,6 +84,7 @@
     .steps li { padding: 76px 20px 22px; }
     .steps li::before { left: 20px; top: 22px; }
     .btn { display: block; text-align: center; }
+    .btn + .btn { margin-left: 0; margin-top: 10px; }
   }
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
   .brand, .eyebrow, h1, .lead, .steps li, .note { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
@@ -113,14 +115,15 @@
       </li>
       <li>
         <h2>Entra no chat da Whop</h2>
-        <p>É lá que o workshop acontece, e é lá que partilhamos as análises depois.</p>
+        <p>É lá que fica fixado tudo o que precisas para o dia, e é lá que partilhamos as análises depois.</p>
         <!-- Chat público do Investor Circle na Whop. -->
         <a class="btn" href="https://whop.com/comunidade-investor-circle/exp_MpkuaEBWqdV4TL/app/" target="_blank" rel="noopener">Abrir o chat da Whop</a>
       </li>
       <li>
         <h2>Guarda a data</h2>
         <p>Quinta-feira, 19 de novembro, às 21h00 (hora de Lisboa).</p>
-        <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Analista%20por%20uma%20Noite%20%C2%B7%20Workshop&amp;dates=20261119T210000Z%2F20261119T223500Z&amp;ctz=Europe%2FLisbon&amp;details=Workshop%20exclusivo%20com%20o%20Gon%C3%A7alo%20Malheiro%2C%20ao%20vivo%20no%20chat%20do%20Investor%20Circle%20na%20Whop.%20O%20link%20de%20acesso%20chega%20por%20email.&amp;location=Chat%20do%20Investor%20Circle%20na%20Whop" target="_blank" rel="noopener">Adicionar ao Google Calendar</a>
+        <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Analista%20por%20uma%20Noite%20%C2%B7%20Workshop&amp;dates=20261119T210000Z%2F20261119T223500Z&amp;ctz=Europe%2FLisbon&amp;details=Workshop%20exclusivo%20com%20o%20Gon%C3%A7alo%20Malheiro%2C%20online%20e%20ao%20vivo.%20O%20link%20de%20acesso%20chega%20por%20email%20na%20v%C3%A9spera%20e%20uma%20hora%20antes.&amp;location=Online%20(link%20por%20email)" target="_blank" rel="noopener">Google Calendar</a>
+        <a class="btn ghost" href="/analista-por-uma-noite.ics">iPhone ou Outlook</a>
       </li>
     </ol>
 

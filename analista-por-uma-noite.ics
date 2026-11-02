@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Goncalo Malheiro//Analista por uma Noite//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:analista-por-uma-noite-20261119@goncalomalheiro.pt
+DTSTAMP:20261102T200000Z
+DTSTART:20261119T210000Z
+DTEND:20261119T223500Z
+SUMMARY:Analista por uma Noite · Workshop
+DESCRIPTION:Workshop ao vivo com o Gonçalo Malheiro. Como analisar uma empresa do início ao fim e saber quando vender ou reforçar. O link de acesso chega por email na véspera e uma hora antes.
+LOCATION:Online (o link chega por email)
+URL:https://workshop-analista.vercel.app/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Analista por uma Noite começa daqui a 1 hora
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
