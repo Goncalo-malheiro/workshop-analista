@@ -26,7 +26,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<script>
+  // Depois do workshop (quinta, 19, ~22h30 em Lisboa), a página principal passa a mostrar o replay.
+  if (Date.now() >= Date.parse('2026-11-19T22:30:00Z')) { location.replace('/replay'); }
+  document.documentElement.classList.add('js');
+</script>
 <style>
   :root {
     --navy: #1B2A4A;

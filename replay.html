@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Replay · Analista por uma Noite · Gonçalo Malheiro</title>
+<meta name="description" content="O replay do workshop Analista por uma Noite: como analisar uma empresa do início ao fim e saber quando vender ou reforçar. Gratuito, disponível até domingo, 22 de novembro, às 23h59.">
+<meta property="og:title" content="Replay · Analista por uma Noite">
+<meta property="og:description" content="Como analisar uma empresa do início ao fim e saber quando vender ou reforçar. Replay disponível até domingo, 22 de novembro.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workshop-analista.vercel.app/replay">
+<meta property="og:site_name" content="Gonçalo Malheiro">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:image" content="https://workshop-analista.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png?v=2">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://www.youtube.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --navy-2: #24365C;
+    --navy-deep: #131F38;
+    --gold: #B07A2E;
+    --gold-text: #8F6122;
+    --gold-light: #EBCF9B;
+    --cream: #F3EFE5;
+    --paper: #FBF8F2;
+    --ink: #1B2A4A;
+    --ink-soft: #4A5470;
+    --on-navy-soft: #C8CEDB;
+    --line: #D9D2C3;
+    --grid: rgba(27, 42, 74, 0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Manrope', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--cream);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; }
+  em { font-style: italic; }
+  [hidden] { display: none !important; }
+
+  /* Topo */
+  .top { padding: 18px 0 8px; }
+  .top-in { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .top-note { font-size: 14px; font-weight: 700; color: var(--ink-soft); }
+  .logo { display: block; height: 44px; width: auto; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--gold-light); color: var(--navy); padding: 7px 14px; border-radius: 999px;
+  }
+  .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); display: inline-block; }
+  .eyebrow {
+    font-size: 13.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold-text); margin-bottom: 14px;
+  }
+
+  /* Botões */
+  .btn {
+    display: inline-block; font: inherit; font-size: 18px; font-weight: 800;
+    color: var(--cream); background: var(--navy); border: 2px solid var(--navy); border-radius: 12px;
+    padding: 14px 22px; cursor: pointer; text-align: center; text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { background: var(--navy-2); transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--navy); }
+  .btn.ghost:hover { background: var(--paper); }
+  .btn.small { font-size: 16px; padding: 11px 18px; }
+
+  /* Hero com o vídeo */
+  .hero { text-align: center; padding-top: 26px; padding-bottom: 76px; }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+    font-size: clamp(44px, 6.4vw, 84px); line-height: 1; letter-spacing: -0.02em; margin-top: 16px;
+  }
+  h1 em { font-weight: 500; color: var(--gold); white-space: nowrap; }
+  .lead { font-size: clamp(17px, 1.9vw, 20px); line-height: 1.5; color: var(--ink-soft); margin: 16px auto 0; max-width: 640px; }
+
+  .player {
+    position: relative; max-width: 1040px; margin: 36px auto 0; aspect-ratio: 16 / 9;
+    background: var(--navy-deep); border: 2px solid var(--navy); border-radius: 22px;
+    box-shadow: 10px 10px 0 var(--navy); overflow: hidden;
+  }
+  .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  .player-closed {
+    position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 18px; padding: 32px; text-align: center; color: var(--cream);
+    background: radial-gradient(120% 90% at 30% 15%, #2E4472 0%, var(--navy) 50%, var(--navy-deep) 100%);
+  }
+  .player-closed b { font-family: 'Fraunces', Georgia, serif; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; }
+  .player-closed p { color: var(--on-navy-soft); max-width: 520px; }
+  .player-closed .btn { background: var(--gold-light); color: var(--navy); border-color: var(--gold-light); }
+
+  .player-bar {
+    max-width: 1040px; margin: 28px auto 0; display: flex; justify-content: space-between; align-items: center;
+    gap: 18px 24px; flex-wrap: wrap; text-align: left;
+  }
+  .bar-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .countdown { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; }
+  .cd-label { font-size: 13.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-text); }
+  .cd-units { display: flex; gap: 8px; }
+  .cd-unit { min-width: 64px; background: var(--navy); color: var(--cream); border-radius: 12px; padding: 8px 12px 7px; text-align: center; box-shadow: 3px 3px 0 var(--gold); }
+  .cd-unit b { display: block; font-family: 'Manrope', Arial, sans-serif; font-size: 24px; font-weight: 800; line-height: 1; color: var(--gold-light); font-variant-numeric: tabular-nums; }
+  .cd-unit span { display: block; margin-top: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-navy-soft); }
+
+  /* Secções */
+  .block { padding-top: 64px; padding-bottom: 64px; }
+  .center { text-align: center; }
+  h2 {
+    font-family: 'Fraunces', Georgia, serif; font-weight: 700;
+    font-size: clamp(34px, 4.6vw, 54px); line-height: 1.06; letter-spacing: -0.01em;
+    max-width: 860px; text-wrap: balance;
+  }
+  h2 em { font-weight: 500; color: var(--gold); }
+  .center h2, .center .sub { margin-left: auto; margin-right: auto; }
+  .sub { font-size: 19px; color: var(--ink-soft); margin-top: 16px; max-width: 640px; }
+
+  /* Linha do tempo */
+  .timeline { position: relative; margin-top: 48px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-50%);
+    background: repeating-linear-gradient(to bottom, var(--navy) 0 8px, transparent 8px 14px);
+  }
+  .t-item { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+  .t-item + .t-item { margin-top: -34px; }
+  .t-item::before {
+    content: ""; position: absolute; left: 50%; top: 22px; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--gold); border: 3px solid var(--cream); box-shadow: 0 0 0 2px var(--navy); transform: translateX(-50%);
+  }
+  .t-card { background: var(--paper); border: 2px solid var(--navy); border-radius: 16px; padding: 22px 24px; }
+  .t-item:nth-child(odd) .t-card { grid-column: 1; text-align: right; }
+  .t-item:nth-child(even) .t-card { grid-column: 2; }
+  .t-when { font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+  .t-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 25px; line-height: 1.15; margin-top: 6px; }
+  .t-card p { font-size: 16px; color: var(--ink-soft); margin-top: 8px; }
+  .t-card.navy { background: var(--navy); color: var(--cream); }
+  .t-card.navy .t-when { color: var(--gold-light); }
+  .t-card.navy p { color: var(--on-navy-soft); }
+  .t-card .t-link { display: inline-block; margin-top: 12px; font-weight: 800; color: var(--gold-light); text-decoration: none; border-bottom: 2px solid var(--gold-light); }
+  .chapters-note { font-size: 14px; color: var(--ink-soft); margin-top: 20px; }
+
+  /* Secção escura: quem dá o workshop */
+  .dark { background: var(--navy); color: var(--cream); padding: 80px 0; position: relative; overflow: hidden; }
+  .dark .eyebrow { color: var(--gold-light); }
+  .dark h2 { color: var(--cream); }
+  .dark h2 em { color: var(--gold-light); }
+  .dark-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat { background: var(--navy-2); border: 1.5px solid rgba(235, 207, 155, 0.35); border-radius: 16px; padding: 22px; }
+  .stat b { display: block; font-family: 'Fraunces', Georgia, serif; font-size: 34px; line-height: 1.05; color: var(--gold-light); }
+  .stat span { display: block; font-size: 15px; color: var(--on-navy-soft); margin-top: 6px; }
+  .story { font-size: 18px; color: var(--on-navy-soft); margin-top: 24px; }
+  .story strong { color: var(--cream); }
+  .quotes { display: grid; gap: 16px; }
+  .quote {
+    background: var(--paper); color: var(--ink); border-radius: 16px; padding: 24px 24px 20px;
+    border: 2px solid var(--gold-light); box-shadow: 6px 6px 0 rgba(235, 207, 155, 0.35);
+  }
+  .quote p { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.35; }
+  .quote p::before { content: "«"; color: var(--gold); }
+  .quote p::after { content: "»"; color: var(--gold); }
+  .quote small { display: block; margin-top: 12px; font-size: 13.5px; font-weight: 700; color: var(--ink-soft); letter-spacing: 0.02em; }
+
+  /* Oferta */
+  .offer { padding-top: 80px; padding-bottom: 72px; }
+  .included { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; text-align: left; }
+  .inc { background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 20px; font-size: 15.5px; color: var(--ink-soft); }
+  .inc b { display: block; font-size: 17px; color: var(--ink); margin-bottom: 4px; }
+  .inc-label { font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 40px; }
+  .plans {
+    display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 28px; align-items: stretch;
+    max-width: 960px; margin: 40px auto 0; text-align: left;
+  }
+  .plan {
+    position: relative; display: flex; flex-direction: column; background: var(--paper);
+    border: 2px solid var(--navy); border-radius: 20px; padding: 32px 30px 26px; box-shadow: 6px 6px 0 var(--navy);
+  }
+  .plan.featured { background: var(--navy); color: var(--cream); box-shadow: 8px 8px 0 var(--gold); }
+  .plan-tag {
+    position: absolute; top: -16px; left: 28px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--gold-light); color: var(--navy); border: 2px solid var(--navy); border-radius: 999px; padding: 4px 12px;
+  }
+  .plan-label { font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+  .plan.featured .plan-label { color: var(--gold-light); }
+  .price { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 58px; line-height: 1; letter-spacing: -0.02em; margin-top: 12px; }
+  .price small { font-family: 'Manrope', Arial, sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0; color: var(--ink-soft); margin-left: 4px; }
+  .plan.featured .price { color: var(--gold-light); }
+  .plan.featured .price small { color: var(--on-navy-soft); }
+  .plan-sub { font-size: 15.5px; font-weight: 700; color: var(--ink-soft); margin-top: 8px; }
+  .plan.featured .plan-sub { color: var(--cream); }
+  .ticks { list-style: none; display: grid; gap: 10px; margin: 22px 0 26px; }
+  .ticks li { position: relative; padding-left: 28px; font-size: 16px; line-height: 1.5; }
+  .ticks li::before { content: "\2713"; position: absolute; left: 0; top: 0; font-weight: 800; color: var(--gold); }
+  .ticks li.no { color: var(--ink-soft); }
+  .ticks li.no::before { content: "\2715"; color: #A6402F; }
+  .plan.featured .ticks li::before { color: var(--gold-light); }
+  .plan .btn { margin-top: auto; width: 100%; }
+  .plan.featured .btn { background: var(--gold-light); color: var(--navy); border-color: var(--gold-light); }
+  .plan.featured .btn:hover { background: #F2DCB4; }
+  .plan-note { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); margin-top: 12px; }
+  .plan.featured .plan-note { color: var(--on-navy-soft); }
+  .offer-note { font-size: 15.5px; color: var(--ink-soft); margin: 34px auto 0; max-width: 620px; }
+  .offer-note b { color: var(--ink); }
+
+  /* Perguntas */
+  .details { margin-top: 32px; border-top: 2px solid var(--navy); }
+  .row { display: grid; grid-template-columns: 320px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1.5px solid var(--line); }
+  .row dt { font-weight: 800; }
+  .row dd { color: var(--ink-soft); }
+
+  /* Fecho */
+  .closing { background: var(--navy); color: var(--cream); padding: 80px 0; text-align: center; }
+  .closing h2 { color: var(--cream); margin: 0 auto; }
+  .closing h2 em { color: var(--gold-light); }
+  .closing p { color: var(--on-navy-soft); font-size: 19px; margin: 16px auto 0; max-width: 560px; }
+  .closing .btn { margin-top: 30px; padding: 16px 30px; background: var(--gold-light); color: var(--navy); border-color: var(--gold-light); }
+  .closing .btn:hover { background: #F2DCB4; }
+  footer { background: var(--navy); color: var(--on-navy-soft); font-size: 14px; padding: 0 0 40px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid rgba(243, 239, 229, 0.18); padding-top: 24px; }
+
+  @media (max-width: 960px) {
+    .dark-grid { grid-template-columns: 1fr; gap: 32px; }
+    .included { grid-template-columns: 1fr; }
+    .plans { grid-template-columns: 1fr; gap: 36px; max-width: 560px; }
+    .row { grid-template-columns: 240px 1fr; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    .top-note { display: none; }
+    .logo { height: 38px; }
+    .hero { padding-top: 16px; padding-bottom: 52px; }
+    .player { margin-top: 26px; border-radius: 14px; box-shadow: 5px 5px 0 var(--navy); }
+    .player-closed { gap: 12px; padding: 20px; }
+    .player-closed p { font-size: 14.5px; }
+    .player-bar { flex-direction: column; align-items: stretch; margin-top: 24px; }
+    .countdown { justify-content: center; }
+    .cd-label { width: 100%; text-align: center; }
+    .bar-actions { flex-direction: column; }
+    .bar-actions .btn { width: 100%; }
+    .block { padding-top: 44px; padding-bottom: 44px; }
+    .timeline::before { left: 9px; transform: none; }
+    .t-item { grid-template-columns: 1fr; gap: 0; padding-left: 36px; }
+    .t-item + .t-item { margin-top: 16px; }
+    .t-item::before { left: 1px; transform: none; }
+    .t-item:nth-child(odd) .t-card, .t-item:nth-child(even) .t-card { grid-column: 1; text-align: left; }
+    .dark { padding: 56px 0; }
+    .offer { padding-top: 56px; padding-bottom: 52px; }
+    .plan { padding: 30px 22px 22px; box-shadow: 5px 5px 0 var(--navy); }
+    .plan.featured { box-shadow: 5px 5px 0 var(--gold); }
+    .price { font-size: 50px; }
+    .row { grid-template-columns: 1fr; gap: 4px; }
+    .closing { padding: 56px 0; }
+    .closing .btn { width: 100%; }
+  }
+
+  /* Animações */
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .top-in > *, .hero > * { animation: rise 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .hero > :nth-child(2) { animation-delay: 0.08s; }
+  .hero > :nth-child(3) { animation-delay: 0.16s; }
+  .hero > :nth-child(4) { animation-delay: 0.26s; }
+  .hero > :nth-child(5) { animation-delay: 0.36s; }
+  .js .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: calc(var(--i, 0) * 90ms);
+  }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+    .top-in > *, .hero > * { animation: none !important; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="logo.png" alt="Gonçalo Malheiro" width="586" height="170">
+    <span class="top-note" id="top-note">Replay até domingo, 22 nov</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="pill" id="pill"><i></i>Replay · disponível até domingo</span>
+    <h1>Analista <em>por uma Noite</em></h1>
+    <p class="lead" id="lead">O workshop completo, para veres ao teu ritmo: como analisar uma empresa do início ao fim e saber quando vender ou reforçar.</p>
+
+    <div class="player" id="player">
+      <!-- Vídeo do YouTube (não listado). No YouTube Studio, "Permitir incorporação" tem de estar ligado. -->
+      <iframe id="video" src="https://www.youtube.com/embed/t_1ifXyou9g?rel=0&amp;playsinline=1"
+        title="Replay do workshop Analista por uma Noite"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="player-closed" id="player-closed" hidden>
+        <b>O replay saiu do ar.</b>
+        <p>O próximo workshop é anunciado primeiro no chat gratuito do Investor Circle. Entra para não o perderes.</p>
+        <a class="btn small" href="https://whop.com/comunidade-investor-circle/exp_MpkuaEBWqdV4TL/app/" target="_blank" rel="noopener">Entrar no chat gratuito</a>
+      </div>
+    </div>
+
+    <div class="player-bar" id="player-bar">
+      <div class="countdown" id="countdown" aria-live="polite">
+        <span class="cd-label">O replay sai do ar em</span>
+        <div class="cd-units">
+          <div class="cd-unit"><b id="cd-d">0</b><span>dias</span></div>
+          <div class="cd-unit"><b id="cd-h">0</b><span>horas</span></div>
+          <div class="cd-unit"><b id="cd-m">0</b><span>min</span></div>
+        </div>
+      </div>
+      <div class="bar-actions">
+        <a class="btn small ghost" href="https://drive.google.com/file/d/1kX-iEO4J6GLje6PCtYV_MM2sM-HddKU3/view?usp=sharing" target="_blank" rel="noopener">Abrir o Playbook</a>
+        <a class="btn small" href="#planos">Ver os planos do Investor Circle</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap center so-aberto">
+    <p class="eyebrow reveal">Os capítulos</p>
+    <h2 class="reveal" style="--i:1">Uma noite, <em>ao teu ritmo.</em></h2>
+    <div class="timeline">
+      <div class="t-item reveal"><div class="t-card navy">
+        <p class="t-when">Antes de carregares no play</p>
+        <h3>Abre o Playbook ao lado</h3>
+        <p>As quatro fases e a folha para preencheres, num só documento. Pausa o vídeo quando quiseres.</p>
+        <a class="t-link" href="https://drive.google.com/file/d/1kX-iEO4J6GLje6PCtYV_MM2sM-HddKU3/view?usp=sharing" target="_blank" rel="noopener">Abrir o Playbook</a>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card">
+        <p class="t-when">Minuto 0</p>
+        <h3>As 4 dores e o método</h3>
+        <p>O resultado da votação, e porque cada dúvida corresponde a uma fase do método.</p>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card">
+        <p class="t-when">Minuto 15 · Fase 1</p>
+        <h3>Filtrar com 6 perguntas</h3>
+        <p>Incluindo a que quase ninguém verifica: se o negócio rende mais do que custa o dinheiro lá metido.</p>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card navy">
+        <p class="t-when">Minuto 25</p>
+        <h3>Uma empresa filtrada do início ao fim</h3>
+        <p>Primeiro eu, depois a sala, depois cada um sozinho. Pausa o vídeo e faz o mesmo na tua folha.</p>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card">
+        <p class="t-when">Minuto 45 · Fases 2, 3 e 4</p>
+        <h3>Investigar, avaliar e acompanhar</h3>
+        <p>Se a empresa é boa ou só está na moda, se está cara ou barata e quando vender ou reforçar.</p>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card">
+        <p class="t-when">Minuto 70</p>
+        <h3>15 minutos sobre o Investor Circle</h3>
+        <p>Está no fim, para não haver surpresas. Os planos estão aqui em baixo, se quiseres ver com calma.</p>
+      </div></div>
+      <div class="t-item reveal"><div class="t-card">
+        <p class="t-when">Minuto 85</p>
+        <h3>As perguntas da sala</h3>
+        <p>As dúvidas de quem esteve ao vivo, respondidas uma a uma.</p>
+      </div></div>
+    </div>
+    <p class="chapters-note reveal">Os minutos são aproximados.</p>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <p class="eyebrow reveal">Quem dá o workshop</p>
+      <h2 class="reveal" style="--i:1">Analista registado. <em>Investidor como tu.</em></h2>
+      <div class="dark-grid">
+        <div>
+          <div class="stats">
+            <div class="stat reveal" style="--i:0"><b>CMVM</b><span>Analista financeiro registado</span></div>
+            <div class="stat reveal" style="--i:1"><b>CEFA</b><span>Certificação em análise financeira</span></div>
+            <div class="stat reveal" style="--i:2"><b>Desde os 21</b><span>A investir todos os meses</span></div>
+            <div class="stat reveal" style="--i:3"><b>Investor Circle</b><span>A comunidade que criei para investir com método</span></div>
+          </div>
+          <p class="story reveal" style="--i:4">Quando comecei, <strong>perdi mais de 1.000€</strong> a comprar ações sem método. Este workshop é o que gostava de ter tido nessa altura.</p>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal" style="--i:1">
+            <p>As dúvidas de uns são respondidas pelos outros. Há um valor enorme em aprender com as perguntas dos outros.</p>
+            <small>Membro do Investor Circle</small>
+          </figure>
+          <figure class="quote reveal" style="--i:2">
+            <p>As análises feitas, prontas a consultar: uma poupança real de tempo que, sozinho, seria impossível de replicar.</p>
+            <small>Membro do Investor Circle</small>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer wrap center so-aberto" id="planos">
+    <p class="eyebrow reveal">Investor Circle · até domingo</p>
+    <h2 class="reveal" style="--i:1">Já tens o método. <em>Agora, aplica-o comigo.</em></h2>
+    <p class="sub reveal" style="--i:2">O que um workshop não te dá é alguém a ajudar-te e a aplicar isto contigo todas as semanas. É isso que é o Investor Circle.</p>
+
+    <p class="inc-label reveal">Nos dois planos</p>
+    <div class="included" style="margin-top:14px">
+      <div class="inc reveal" style="--i:0"><b>A tua primeira análise</b>Nos primeiros 30 dias: uma comigo, depois a tua, entregue com o meu feedback.</div>
+      <div class="inc reveal" style="--i:1"><b>A app e as minhas análises</b>Carteira, watchlist, calculadoras e as análises que publico, prontas a consultar.</div>
+      <div class="inc reveal" style="--i:2"><b>Sessões ao vivo e comunidade</b>As sessões ao vivo, a newsletter semanal e a comunidade para tirares dúvidas.</div>
+    </div>
+
+    <div class="plans">
+      <article class="plan featured reveal" style="--i:0">
+        <span class="plan-tag">Inclui mentoria</span>
+        <p class="plan-label">Plano anual</p>
+        <p class="price">€109,99<small>por ano</small></p>
+        <p class="plan-sub">Pagas 10 meses e tens 12.</p>
+        <ul class="ticks">
+          <li><b>1h de mentoria individual comigo</b>, só no plano anual, para as primeiras 20 pessoas</li>
+          <li>Tudo o que está nos dois planos</li>
+          <li>Preço mantido enquanto a subscrição estiver ativa</li>
+        </ul>
+        <a class="btn" href="https://whop.com/c/comunidade-investor-circle/workshop" target="_blank" rel="noopener">Entrar no plano anual</a>
+        <p class="plan-note">A partir de segunda, 23: €209,99 por ano.</p>
+      </article>
+      <article class="plan reveal" style="--i:1">
+        <p class="plan-label">Plano mensal</p>
+        <p class="price">€10,99<small>por mês</small></p>
+        <p class="plan-sub">Para quem prefere pagar ao mês.</p>
+        <ul class="ticks">
+          <li>Tudo o que está nos dois planos</li>
+          <li>Preço mantido enquanto a subscrição estiver ativa</li>
+          <li class="no">Sem a mentoria individual</li>
+        </ul>
+        <a class="btn ghost" href="https://whop.com/c/comunidade-investor-circle/workshop" target="_blank" rel="noopener">Entrar no plano mensal</a>
+        <p class="plan-note">Na página de pagamento, escolhe a opção mensal. A partir de segunda, 23: €20,99 por mês.</p>
+      </article>
+    </div>
+    <p class="offer-note reveal">Os dois preços ficam até <b>domingo, 22 de novembro, às 23h59</b>. A partir de segunda, o preço sobe porque o produto mudou: onboarding, módulo de ações e app.</p>
+  </section>
+
+  <section class="block wrap so-aberto">
+    <p class="eyebrow reveal">Perguntas</p>
+    <h2 class="reveal" style="--i:1">Antes de decidires.</h2>
+    <dl class="details">
+      <div class="row reveal" style="--i:0"><dt>Até quando posso ver o replay?</dt><dd>Até domingo, 22 de novembro, às 23h59 (hora de Lisboa). Depois, sai do ar.</dd></div>
+      <div class="row reveal" style="--i:1"><dt>Quanto tempo preciso?</dt><dd>São 40 minutos de aulas e cerca de 2 horas para teres a tua primeira análise.</dd></div>
+      <div class="row reveal" style="--i:2"><dt>Preciso de saber finanças ou Excel?</dt><dd>Não. As aulas explicam cada número e a plataforma faz as contas todas.</dd></div>
+      <div class="row reveal" style="--i:3"><dt>Funciona se só tenho ETFs?</dt><dd>Resposta honesta: se estás bem só com ETFs, não precisas disto. O foco é a análise de ações.</dd></div>
+      <div class="row reveal" style="--i:4"><dt>A mentoria é para me dizeres o que comprar?</dt><dd>Não. É sobre a tua análise e o teu método, nunca sobre o que deves comprar ou vender.</dd></div>
+      <div class="row reveal" style="--i:5"><dt>Posso cancelar?</dt><dd>Podes cancelar a renovação quando quiseres. Enquanto a subscrição estiver ativa, manténs o preço. Se cancelares, voltas ao preço em vigor.</dd></div>
+    </dl>
+  </section>
+
+  <section class="closing">
+    <div class="wrap reveal">
+      <h2>Uma noite. Uma empresa.<br><em>O método todo.</em></h2>
+      <p id="closing-text">O replay e os preços de lançamento ficam até domingo, 22 de novembro, às 23h59.</p>
+      <a class="btn" id="closing-btn" href="#planos">Ver os planos</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Formação e análise pessoal. Não constitui recomendação de investimento.</span>
+    <span>© 2026 Gonçalo Malheiro · @goncalomalheiro_</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    }
+  })();
+
+  (function () {
+    // Lisboa está em UTC+0 em novembro. O replay e a oferta fecham no domingo, 22, às 23h59.
+    var FECHO = Date.parse('2026-11-22T23:59:59Z');
+    var CHAT = 'https://whop.com/comunidade-investor-circle/exp_MpkuaEBWqdV4TL/app/';
+    var d = document.getElementById('cd-d'), h = document.getElementById('cd-h'), m = document.getElementById('cd-m');
+    function fechar() {
+      var video = document.getElementById('video');
+      if (video) { video.remove(); }
+      document.getElementById('player-closed').hidden = false;
+      document.getElementById('player-bar').hidden = true;
+      document.querySelectorAll('.so-aberto').forEach(function (el) { el.hidden = true; });
+      document.getElementById('top-note').textContent = 'Replay terminado';
+      document.getElementById('pill').innerHTML = '<i></i>O replay terminou';
+      document.getElementById('lead').textContent = 'Obrigado a quem viu, e a quem filtrou a primeira empresa comigo.';
+      document.getElementById('closing-text').textContent = 'O replay já saiu do ar. O próximo workshop é anunciado primeiro no chat gratuito.';
+      var b = document.getElementById('closing-btn');
+      b.textContent = 'Entrar no chat gratuito';
+      b.href = CHAT; b.target = '_blank'; b.rel = 'noopener';
+    }
+    function tick() {
+      var ms = FECHO - Date.now();
+      if (ms <= 0) { fechar(); return; }
+      var min = Math.floor(ms / 60000);
+      d.textContent = Math.floor(min / 1440);
+      h.textContent = Math.floor((min % 1440) / 60);
+      m.textContent = min % 60;
+      setTimeout(tick, 20000);
+    }
+    tick();
+  })();
+</script>
+</body>
+</html>
